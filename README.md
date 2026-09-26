@@ -1,6 +1,6 @@
 # Repository Coverage
 
-[Full report](https://htmlpreview.github.io/?https://github.com/invoice-x/invoice2data/blob/python-coverage-comment-action-data/htmlcov/index.html)
+[Full report](https://htmlpreview.github.io/?https://github.com/ryanduguid/invoice2data/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
 | Name                                                  |    Stmts |     Miss |   Branch |   BrPart |   Cover |   Missing |
 |------------------------------------------------------ | -------: | -------: | -------: | -------: | ------: | --------: |
@@ -18,7 +18,7 @@
 | src/invoice2data/api.py                               |      163 |       15 |       68 |       10 |     87% |154-\>159, 181, 260-261, 280-\>279, 282, 428-\>430, 448-456, 471-\>469, 473, 489-\>exit, 498 |
 | src/invoice2data/exceptions.py                        |       17 |        0 |        4 |        1 |     95% |   41-\>43 |
 | src/invoice2data/extract/\_\_init\_\_.py              |        0 |        0 |        0 |        0 |    100% |           |
-| src/invoice2data/extract/\_dates.py                   |       41 |        2 |       10 |        0 |     96% |     34-35 |
+| src/invoice2data/extract/\_dates.py                   |       41 |        2 |       10 |        0 |     96% |     35-36 |
 | src/invoice2data/extract/\_regex.py                   |       25 |        0 |        2 |        0 |    100% |           |
 | src/invoice2data/extract/candidates.py                |       58 |        4 |       20 |        3 |     91% |77-78, 112-\>110, 146, 148 |
 | src/invoice2data/extract/excalibur.py                 |       35 |        0 |       10 |        0 |    100% |           |
@@ -71,7 +71,7 @@
 | tests/test\_cli\_logging.py                           |       33 |        0 |        0 |        0 |    100% |           |
 | tests/test\_cross\_page\_lines.py                     |       37 |        0 |        0 |        0 |    100% |           |
 | tests/test\_csv\_output.py                            |       47 |        0 |        0 |        0 |    100% |           |
-| tests/test\_dates.py                                  |       23 |        0 |        0 |        0 |    100% |           |
+| tests/test\_dates.py                                  |       36 |        0 |        0 |        0 |    100% |           |
 | tests/test\_deprecations.py                           |       11 |        0 |        0 |        0 |    100% |           |
 | tests/test\_doctr.py                                  |       46 |        0 |        0 |        0 |    100% |           |
 | tests/test\_excalibur.py                              |       55 |        0 |        2 |        0 |    100% |           |
@@ -100,7 +100,7 @@
 | tests/test\_paddleocr.py                              |       32 |        0 |        0 |        0 |    100% |           |
 | tests/test\_page\_ranges.py                           |       84 |        0 |        0 |        0 |    100% |           |
 | tests/test\_pdf\_backends.py                          |       39 |        0 |        0 |        0 |    100% |           |
-| tests/test\_property.py                               |       66 |        2 |        0 |        0 |     97% |   111-112 |
+| tests/test\_property.py                               |       70 |        2 |        0 |        0 |     97% |   120-121 |
 | tests/test\_record\_values.py                         |       24 |        1 |        0 |        0 |     96% |        11 |
 | tests/test\_regex\_cache.py                           |       16 |        0 |        0 |        0 |    100% |           |
 | tests/test\_regex\_engine.py                          |       16 |        0 |        0 |        0 |    100% |           |
@@ -115,7 +115,7 @@
 | tests/test\_text\_cache.py                            |       39 |        0 |        0 |        0 |    100% |           |
 | tests/test\_unece\_uom.py                             |       45 |        0 |        0 |        0 |    100% |           |
 | tests/test\_validators.py                             |       28 |        0 |        0 |        0 |    100% |           |
-| **TOTAL**                                             | **4939** |  **203** | **1062** |  **131** | **94%** |           |
+| **TOTAL**                                             | **4956** |  **203** | **1062** |  **131** | **94%** |           |
 
 
 ## Setup coverage badge
@@ -124,20 +124,20 @@ Below are examples of the badges you can use in your main branch `README` file.
 
 ### Direct image
 
-[![Coverage badge](https://raw.githubusercontent.com/invoice-x/invoice2data/python-coverage-comment-action-data/badge.svg)](https://htmlpreview.github.io/?https://github.com/invoice-x/invoice2data/blob/python-coverage-comment-action-data/htmlcov/index.html)
+[![Coverage badge](https://raw.githubusercontent.com/ryanduguid/invoice2data/python-coverage-comment-action-data/badge.svg)](https://htmlpreview.github.io/?https://github.com/ryanduguid/invoice2data/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
 This is the one to use if your repository is private or if you don't want to customize anything.
 
 ### [Shields.io](https://shields.io) Json Endpoint
 
-[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/invoice-x/invoice2data/python-coverage-comment-action-data/endpoint.json)](https://htmlpreview.github.io/?https://github.com/invoice-x/invoice2data/blob/python-coverage-comment-action-data/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/ryanduguid/invoice2data/python-coverage-comment-action-data/endpoint.json)](https://htmlpreview.github.io/?https://github.com/ryanduguid/invoice2data/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
 Using this one will allow you to [customize](https://shields.io/endpoint) the look of your badge.
 It won't work with private repositories. It won't be refreshed more than once per five minutes.
 
 ### [Shields.io](https://shields.io) Dynamic Badge
 
-[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2Finvoice-x%2Finvoice2data%2Fpython-coverage-comment-action-data%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/invoice-x/invoice2data/blob/python-coverage-comment-action-data/htmlcov/index.html)
+[![Coverage badge](https://img.shields.io/badge/dynamic/json?color=brightgreen&label=coverage&query=%24.message&url=https%3A%2F%2Fraw.githubusercontent.com%2Fryanduguid%2Finvoice2data%2Fpython-coverage-comment-action-data%2Fendpoint.json)](https://htmlpreview.github.io/?https://github.com/ryanduguid/invoice2data/blob/python-coverage-comment-action-data/htmlcov/index.html)
 
 This one will always be the same color. It won't work for private repos. I'm not even sure why we included it.
 
