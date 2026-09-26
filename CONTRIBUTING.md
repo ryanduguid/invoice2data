@@ -37,7 +37,7 @@ Request features on the [Issue Tracker].
 
 ## How to set up your development environment
 
-You need Python 3.9+ and the following tools:
+You need Python 3.10+ and the following tools:
 
 - [uv]
 - [Nox]
@@ -45,7 +45,7 @@ You need Python 3.9+ and the following tools:
 Install the package with development requirements:
 
 ```console
-$ uv install
+$ uv sync --group dev --group lint
 ```
 
 You can now run an interactive Python session,
@@ -92,7 +92,7 @@ Open a [pull request] to submit changes to this project.
 Your pull request needs to meet the following guidelines for acceptance:
 
 - The Nox test suite must pass without errors and warnings.
-- Include unit tests. This project maintains 100% code coverage.
+- Include unit tests. Keep combined coverage at or above the configured 90% threshold.
 - If your changes add functionality, update the documentation accordingly.
 
 Feel free to submit early, though—we can always iterate on this.

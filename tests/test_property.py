@@ -101,13 +101,22 @@ def test_parse_number_respects_decimal_separator(sep: str) -> None:
 # --------------------------------------------------------------------------- #
 
 
-@given(value=st.text(min_size=0, max_size=64))
-@settings(max_examples=200, suppress_health_check=[HealthCheck.function_scoped_fixture])
-def test_parse_date_never_crashes(value: str) -> None:
-    """`parse_date` must return a datetime, a date, or None -- never raise."""
+@pytest.fixture(scope="module")
+def date_parser_template() -> InvoiceTemplate:
+    """Initialise the optional fallback outside the per-input timing check."""
     tpl = _tpl()
+    tpl.parse_date("not a date")
+    return tpl
+
+
+@given(value=st.text(min_size=0, max_size=64))
+@settings(max_examples=200)
+def test_parse_date_never_crashes(
+    value: str, date_parser_template: InvoiceTemplate
+) -> None:
+    """`parse_date` must return a datetime, a date, or None -- never raise."""
     try:
-        result = tpl.parse_date(value)
+        result = date_parser_template.parse_date(value)
     except InvoiceProcessingError:
         return  # typed error class is allowed
     # None (no parse) or a datetime/date-like are the only allowed happy paths.

@@ -160,6 +160,7 @@ fields:
     value: Amazon
 ```
 
+(parser-lines)=
 ### Parser `lines`
 
 This parser allows parsing selected invoice section as a set of lines

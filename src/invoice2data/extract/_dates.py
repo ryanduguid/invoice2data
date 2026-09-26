@@ -1,4 +1,4 @@
-"""Tiered, cached date parsing.
+"""Tiered date parsing with cached explicit formats and reusable parsers.
 
 Order, fastest applicable first:
 
@@ -9,8 +9,9 @@ Order, fastest applicable first:
    **optional** dependency (``pip install invoice2data[dateparser]``).
 
 With dateparser absent, localized month-name dates won't parse, but numeric and
-English dates still do via tiers 1-2. Results are memoized (absolute-date parsing
-is deterministic for given inputs).
+English dates still do via tiers 1-2. Explicit-format results are cached.
+Fallback results are resolved on each call because relative dates and missing
+date components depend on the current time.
 """
 
 import contextlib
@@ -36,6 +37,7 @@ def _date_data_parser(languages: tuple[str, ...]) -> Any:
     return DateDataParser(languages=list(languages) or None)
 
 
+@lru_cache(maxsize=4096)
 def _try_strptime(
     value: str, date_formats: tuple[str, ...]
 ) -> datetime.datetime | None:
@@ -95,13 +97,12 @@ def _try_dateparser(
     return date_obj
 
 
-@lru_cache(maxsize=4096)
 def parse_date(
     value: str,
     date_formats: tuple[str, ...] = (),
     languages: tuple[str, ...] = (),
 ) -> datetime.datetime | None:
-    """Parse a date string using the tiered strategy (memoized).
+    """Parse a date string using the tiered strategy.
 
     Args:
         value (str): The date string to parse.
