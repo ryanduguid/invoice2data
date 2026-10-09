@@ -41,8 +41,8 @@ flowchart LR
  click regex "tutorial.html"
  click static "tutorial.html"
  click camelot "tutorial.html"
-    style V fill:#7851A9,stroke:#FFFFF0,stroke-width:2px,color:#FFFFF0
-    style result fill:#7851A9,stroke:#FFFFF0,stroke-width:2px,color:#FFFFF0
+    style V fill:#990024,stroke:#FFFFF0,stroke-width:2px,color:#FFFFF0
+    style result fill:#990024,stroke:#FFFFF0,stroke-width:2px,color:#FFFFF0
 ```
 
 ## 1. Text extraction
