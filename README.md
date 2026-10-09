@@ -2,6 +2,11 @@
   <img src="docs/_static/banner.svg" alt="invoice2data" width="640">
 </p>
 
+**Fork status**
+
+[![Fork code quality](https://app.codacy.com/project/badge/Grade/a338bafa5d1347da88568069070735f4?branch=master)](https://app.codacy.com/gh/ryanduguid/invoice2data/dashboard)
+[![Fork Tests](https://github.com/ryanduguid/invoice2data/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/ryanduguid/invoice2data/actions/workflows/tests.yml)
+
 # Data extractor for PDF invoices - invoice2data
 
 [![Read the documentation at https://invoice2data.readthedocs.io/](https://img.shields.io/readthedocs/invoice2data/latest.svg?label=Read%20the%20Docs)][read the docs]
