@@ -182,7 +182,7 @@ jobs:
 
       - name: Combine coverage data and display human readable report
         run: |
-          uvx --no-build nox --session=coverage
+          uvx --no-build nox@2026.8.17 --session=coverage
 
       - name: Coverage comment
         id: coverage_comment
