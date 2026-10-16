@@ -6,7 +6,7 @@ turns a PDF (or image) into structured data.
 ```mermaid
 
 flowchart LR
-%%{init: {"theme": "base", "look": "classic", "themeVariables": {"background": "#000000", "primaryColor": "#66023C", "primaryTextColor": "#FFFFF0", "primaryBorderColor": "#FFFFF0", "lineColor": "#000000", "textColor": "#FFFFF0", "edgeLabelBackground": "#000000", "clusterBkg": "#000000", "clusterBorder": "#FFFFF0", "titleColor": "#FFFFF0"}, "themeCSS": ".flowchart-link, .relationshipLine, marker path { filter: drop-shadow(0px 1px 0px #FFFFF0) drop-shadow(0px -1px 0px #FFFFF0) drop-shadow(1px 0px 0px #FFFFF0) drop-shadow(-1px 0px 0px #FFFFF0); } a { color: #FFFFF0; } .node.clickable .nodeLabel, .node.clickable .nodeLabel p { color: #FFFFF0; text-decoration: underline; }"}}%%
+%%{init: {"theme": "base", "look": "classic", "themeVariables": {"background": "#000000", "primaryColor": "#66023C", "primaryTextColor": "#FFFFF0", "primaryBorderColor": "#FFFFF0", "lineColor": "#FFD32A", "textColor": "#FFFFF0", "edgeLabelBackground": "#000000", "clusterBkg": "#000000", "clusterBorder": "#9B7735", "titleColor": "#FFFFF0"}, "themeCSS": " a { color: #FFFFF0; } .node.clickable .nodeLabel, .node.clickable .nodeLabel p { color: #FFFFF0; text-decoration: underline; }"}}%%
 
     InvoiceFile[fa:fa-file-invoice Invoice file\n\npdf\nimage\ntext] --> Input-module(Input module\n\npdfium default\npdftotext\ntext\npdfminer\npdfplumber\ntesseract / ocrmypdf\ndocTR / paddleocr\ngvision)
 
@@ -43,6 +43,10 @@ flowchart LR
  click camelot "tutorial.html"
     style V fill:#990024,stroke:#FFFFF0,stroke-width:2px,color:#FFFFF0
     style result fill:#990024,stroke:#FFFFF0,stroke-width:2px,color:#FFFFF0
+    classDef external fill:#745EB1,stroke:#FFFFF0,stroke-width:2px,color:#FFFFF0
+    class InvoiceFile,Invoice-Templates external
+    classDef decision fill:#E7162F,stroke:#FFFFF0,stroke-width:2px,color:#FFFFF0
+    class C decision
 ```
 
 ## 1. Text extraction
