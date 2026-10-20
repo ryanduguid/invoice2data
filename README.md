@@ -4,19 +4,19 @@
 
 **Fork status**
 
-[![Fork code quality](https://app.codacy.com/project/badge/Grade/a338bafa5d1347da88568069070735f4?branch=master)](https://app.codacy.com/gh/ryanduguid/invoice2data/dashboard)
-[![Fork Tests](https://github.com/ryanduguid/invoice2data/actions/workflows/tests.yml/badge.svg?branch=master)](https://github.com/ryanduguid/invoice2data/actions/workflows/tests.yml)
+[![Fork code quality](https://img.shields.io/codacy/grade/a338bafa5d1347da88568069070735f4/master?style=flat&labelColor=000000)](https://app.codacy.com/gh/ryanduguid/invoice2data/dashboard)
+[![Fork Tests](https://img.shields.io/github/actions/workflow/status/ryanduguid/invoice2data/tests.yml?branch=master&label=Tests&style=flat&labelColor=000000)](https://github.com/ryanduguid/invoice2data/actions/workflows/tests.yml)
 
 # Data extractor for PDF invoices - invoice2data
 
-[![Read the documentation at https://invoice2data.readthedocs.io/](https://img.shields.io/readthedocs/invoice2data/latest.svg?label=Read%20the%20Docs)][read the docs]
-[![Version](https://img.shields.io/pypi/v/invoice2data.svg)](https://pypi.python.org/pypi/invoice2data)
-[![Support Python versions](https://img.shields.io/pypi/pyversions/invoice2data.svg)](https://pypi.python.org/pypi/invoice2data)
-[![License](https://img.shields.io/pypi/l/invoice2data)][license]
-[![Tests](https://github.com/invoice-x/invoice2data/workflows/Tests/badge.svg)][tests]
+[![Read the documentation at https://invoice2data.readthedocs.io/](https://img.shields.io/readthedocs/invoice2data/latest.svg?label=Read%20the%20Docs&style=flat&labelColor=000000)][read the docs]
+[![Version](https://img.shields.io/pypi/v/invoice2data.svg?style=flat&labelColor=000000&color=66023C)](https://pypi.python.org/pypi/invoice2data)
+[![Support Python versions](https://img.shields.io/pypi/pyversions/invoice2data.svg?style=flat&labelColor=000000&color=66023C)](https://pypi.python.org/pypi/invoice2data)
+[![License](https://img.shields.io/pypi/l/invoice2data?style=flat&labelColor=000000&color=66023C)][license]
+[![Tests](https://img.shields.io/github/actions/workflow/status/invoice-x/invoice2data/tests.yml?label=Tests&style=flat&labelColor=000000)][tests]
 [![Coverage](https://raw.githubusercontent.com/invoice-x/invoice2data/python-coverage-comment-action-data/badge.svg)][coverage]
-[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)][pre-commit]
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=E5E4E2&style=flat&labelColor=000000&color=66023C)][pre-commit]
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json&style=flat&labelColor=000000)](https://github.com/astral-sh/ruff)
 
 <!-- docs-body -->
 
