@@ -21,7 +21,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Draft Release
-        uses: release-drafter/release-drafter@72967cdc98ddd3160f1fc3dff619de365e137dd0 # v7.9.0
+        uses: release-drafter/release-drafter@978bb0b30c5ee8cdd332ced253758157150d43f0 # v7.10.0
         with:
           publish: false
         env:
@@ -86,7 +86,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Build wheels
-        uses: pypa/cibuildwheel@e090b81e30c4d855ea63bf4b6e59204c09a101ae # v4.2.1
+        uses: pypa/cibuildwheel@b3395e271a35f73dad77f21802abe9b986dfe299 # v4.3.1
         env:
           INVOICE2DATA_COMPILE_MYPYC: "1"
           CIBW_ARCHS: ${{ matrix.arch }}
