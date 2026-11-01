@@ -53,7 +53,7 @@ jobs:
       - name: Build package (pure Python)
         run: uv build --sdist --wheel
       - name: Publish to TestPyPI
-        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # release/v1
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # release/v1
         with:
           repository_url: https://test.pypi.org/legacy/
           skip-existing: true
@@ -86,7 +86,7 @@ jobs:
         with:
           persist-credentials: false
       - name: Build wheels
-        uses: pypa/cibuildwheel@b3395e271a35f73dad77f21802abe9b986dfe299 # v4.3.1
+        uses: pypa/cibuildwheel@b9e566a2b284570af229f6c2a33673410d0389a3 # v4.3.4
         env:
           INVOICE2DATA_COMPILE_MYPYC: "1"
           CIBW_ARCHS: ${{ matrix.arch }}
@@ -151,4 +151,4 @@ jobs:
       - name: Remove sigstore files before publishing to PyPI
         run: rm -f dist/*.sigstore dist/*.sigstore.json
       - name: Publish package to PyPI
-        uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33 # release/v1
+        uses: pypa/gh-action-pypi-publish@7245906fb61fa33a13554f9d5fb856fe61758086 # release/v1
