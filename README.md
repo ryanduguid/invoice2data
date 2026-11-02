@@ -6,9 +6,11 @@
 
 **Fork status**
 
-[![Fork code quality](https://img.shields.io/codacy/grade/a338bafa5d1347da88568069070735f4/master?style=flat&labelColor=000000)](https://app.codacy.com/gh/ryanduguid/invoice2data/dashboard) [![Fork Tests](https://img.shields.io/github/actions/workflow/status/ryanduguid/invoice2data/tests.yml?branch=master&label=Tests&style=flat&labelColor=000000)](https://github.com/ryanduguid/invoice2data/actions/workflows/tests.yml)
+[![Fork code quality](https://img.shields.io/codacy/grade/a338bafa5d1347da88568069070735f4/master?style=flat&labelColor=000000)](https://app.codacy.com/gh/ryanduguid/invoice2data/dashboard)
 
 </div>
+
+GitHub Actions is off for this fork, so `tests.yml` does not run on GitHub. Run its steps locally before merging.
 
 # Data extractor for PDF invoices - invoice2data
 
