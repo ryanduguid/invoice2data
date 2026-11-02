@@ -1,3 +1,4 @@
+import json
 import os
 import shutil
 import unittest
@@ -344,3 +345,29 @@ def test_quoted_yaml_keyword_ending_in_colon_loads_normally(
     templates = read_templates(str(templatedirectory))
     assert len(templates) == 1
     assert templates[0]["exclude_keywords"] == ["invoice id:"]
+
+
+def test_non_mapping_options_skip_the_template(
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    """`options` that is not a mapping is dropped, not merged into the defaults.
+
+    ``InvoiceTemplate`` merges ``options`` with ``dict.update``, which raised
+    ``ValueError`` out of ``ordered_load`` for a stream such as
+    ``[{"issuer": "H", "keywords": ["a"], "options": "x"}]``.
+    """
+    stream = [
+        {"template_name": "bad.json", "issuer": "H", "keywords": ["a"], "options": "x"}
+    ]
+    assert ordered_load(json.dumps(stream)) == []
+    assert "bad.json" in caplog.text
+    assert "`options` must be a mapping" in caplog.text
+    assert "str" in caplog.text
+
+
+def test_mapping_options_still_load() -> None:
+    """A well-formed `options` mapping keeps merging with the defaults."""
+    stream = [{"issuer": "H", "keywords": ["a"], "options": {"currency": "AUD"}}]
+    templates = ordered_load(json.dumps(stream))
+    assert len(templates) == 1
+    assert templates[0].options["currency"] == "AUD"

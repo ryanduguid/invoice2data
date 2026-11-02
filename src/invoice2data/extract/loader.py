@@ -305,6 +305,16 @@ def prepare_template(tpl: dict[str, Any]) -> dict[str, Any] | None:
                 )
                 return None
 
+    # InvoiceTemplate merges `options` into its defaults with dict.update, so a
+    # non-mapping value would raise out of the loader instead of being skipped.
+    if "options" in tpl and not isinstance(tpl["options"], dict):
+        logger.warning(
+            "Failed to load template %s. `options` must be a mapping, got %s.",
+            tpl.get("template_name", "<stream>"),
+            type(tpl["options"]).__name__,
+        )
+        return None
+
     # Set priority if not provided
     tpl.setdefault("priority", 5)
 
