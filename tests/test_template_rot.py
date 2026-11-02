@@ -118,7 +118,7 @@ def test_template_regexes_compile(template: dict[str, Any]) -> None:
             for p in patterns:
                 try:
                     regex.compile(p)
-                except regex.error as exc:  # noqa: PERF203
+                except regex.error as exc:
                     pytest.fail(f"{name}: field {field!r} regex won't compile: {exc}")
 
 

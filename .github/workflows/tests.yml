@@ -18,12 +18,11 @@ jobs:
           # `safety` retired (its CLI moved behind auth) -> pypa/pip-audit instead.
           - { python: "3.13", os: "ubuntu-latest", session: "pip-audit" }
           - { python: "3.13", os: "ubuntu-latest", session: "mypy" }
-          - { python: "3.10", os: "ubuntu-latest", session: "mypy" }
+          - { python: "3.11", os: "ubuntu-latest", session: "mypy" }
           - { python: "3.13", os: "ubuntu-latest", session: "ty" }
           - { python: "3.13", os: "ubuntu-latest", session: "tests" }
           - { python: "3.12", os: "ubuntu-latest", session: "tests" }
           - { python: "3.11", os: "ubuntu-latest", session: "tests" }
-          - { python: "3.10", os: "ubuntu-latest", session: "tests" }
           - { python: "3.12", os: "windows-latest", session: "tests" }
           # Strict Windows job: runs only the portable subset
           # (`pytest -m windows_strict` -- no poppler/tesseract/ImageMagick
