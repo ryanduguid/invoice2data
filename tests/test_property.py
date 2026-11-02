@@ -165,8 +165,11 @@ def test_ordered_load_accepts_well_formed_stream(
 ) -> None:
     """A stream with the required `keywords` field always parses into a template."""
     tpl_dict = {"issuer": "H", "keywords": keywords, **extra}
-    # Extra fields must not replace the required keywords being checked.
-    assume(all(k not in {"template_name", "keywords"} for k in extra))
+    # Extra fields must not replace the keywords under test or give `match` or
+    # `options` a non-mapping value, which the loader rightly rejects.
+    assume(
+        all(k not in {"template_name", "keywords", "match", "options"} for k in extra)
+    )
     payload = json.dumps([tpl_dict])
 
     result = ordered_load(payload)
