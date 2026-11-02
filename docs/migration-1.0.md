@@ -7,7 +7,9 @@ migrate.
 ## Python support
 
 - 1.0 requires **Python 3.10+** (3.8 and 3.9 were dropped in the 0.4.x line).
-- Raising the floor to **3.11** is planned for a later release, not 1.0.
+- After 1.0.1, `master` requires **Python 3.11+**: Python 3.10 reached end of
+  life in October 2026, and fixed releases of some dependencies (Pillow 13,
+  filelock 4.2.1) no longer support it.
 
 ## Deprecations (still work in 1.0, removed in a future major)
 

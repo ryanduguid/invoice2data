@@ -10,7 +10,7 @@ name: invoice2data
 channels:
   - conda-forge
 dependencies:
-  - python >=3.10
+  - python >=3.11
   - invoice2data     # conda-forge/invoice2data-feedstock
   - libyaml          # 10x faster YAML template loading
   # --- system tools pip cannot install ---

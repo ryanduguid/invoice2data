@@ -456,7 +456,7 @@ def main(  # noqa: C901
                     )  # Extract file processing and copy/move
             if explain:
                 _explain(f.name, res)
-        except Exception as e:  # noqa: PERF203
+        except Exception as e:
             logger.critical(
                 "Invoice2data failed to process %s. \nError message: %s", f.name, e
             )
