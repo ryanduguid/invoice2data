@@ -10,6 +10,8 @@
 
 </div>
 
+ryanduguid/invoice2data is [Ryan Duguid](https://duguid.com.au/)'s fork of [invoice-x/invoice2data](https://github.com/invoice-x/invoice2data), adding time-dependent invoice date and template loader fixes, raised dependency floors and a Python 3.11 minimum for invoice2data users who need those changes.
+
 GitHub Actions is off for this fork, so `tests.yml` does not run on GitHub. Run its steps locally before merging.
 
 # Data extractor for PDF invoices - invoice2data
